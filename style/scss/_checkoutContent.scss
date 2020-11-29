@@ -1,0 +1,286 @@
+.checkoutDetail {
+    margin-top: 89px;
+    margin-bottom: 93px;
+    @media (max-width: 575px) {
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+}
+
+.checkoutDetailCont {
+    padding: 0;
+}
+
+.accordion {
+    border: none;
+    border-radius: 0;
+    background: none;
+}
+
+.card {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #e8e8e8 !important;
+}
+
+.card-header {
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+.chAccTitle {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222222;
+    text-decoration: none;
+    padding: 0;
+    height: 72px;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+
+    &:hover {
+        color: inherit;
+        text-decoration: none;
+    }
+}
+
+.show{
+    display: block !important;
+}
+
+.collapse{
+    display: none;
+}
+
+.card-body {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 79px;
+    margin-left: 35px;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.shippingadressCheck {
+    margin-right: 20px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    @media (max-width: 575px) {
+        width: auto;
+    }
+
+    h5 {
+        font-family: "Lato", sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #222222;
+        margin-bottom: 16px;
+    }
+
+    p {
+        font-family: "Lato", sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        color: #b3b2b2;
+        margin: 0 0 33px;
+    }
+
+    ul {
+        list-style: none;
+        font-family: "Lato", sans-serif;
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 400;
+        color: #b3b2b2;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.shippingadressCheckText {
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 400;
+    color: #b3b2b2;
+}
+
+.shippingadressCheckRadio {
+    font-family: "Lato", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #b3b2b2;
+    margin: 0 0 33px;
+}
+
+.checkRadio {
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #222222;
+    display: flex;
+    align-items: center;
+    height: 14px;
+
+    input {
+        display: none;
+    }
+
+    span {
+        width: 14px;
+        height: 14px;
+        background-color: #ffffff;
+        border: 2px solid #555555;
+        border-radius: 50%;
+        position: relative;
+        display: inline-block;
+        margin-right: 14px;
+    }
+}
+
+.checkRadio input:checked+span::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    background: #000;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.checkContinue {
+    width: 180px;
+    height: 50px;
+    background-color: #ffffff;
+    border: 1.0px solid #eaeaea;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4a4a4a;
+    margin-top: 23px;
+    outline: none;
+    transition-duration: 0.5s;
+
+    &:hover {
+        background-color: #f16d7f;
+    }
+}
+
+.shippingadressLogin {
+    margin-right: 176px;
+    @media(max-width: 1200px) {
+        margin-right: 0;
+    }
+    @media(max-width: 767px) {
+        margin-top: 50px;
+    }
+
+    h5 {
+        font-family: "Lato", sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #222222;
+        margin-bottom: 15px;
+
+        b {
+            font-size: 17px;
+            font-weight: 700;
+            color: #ff0d0d;
+        }
+    }
+
+    p {
+        font-family: "Lato", sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        color: #b3b2b2;
+        margin-bottom: 27px;
+    }
+}
+
+.loginInputText {
+    width: 390px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    margin-bottom: 21px;
+    padding: 0;
+    padding-left: 5px;
+    outline: none;
+
+    &:focus{
+        background-color: #fbd5d5;
+    }
+
+    @media(max-width: 991px) {
+        min-width: 250px;
+        width: auto;
+    }
+    @media(max-width: 767px) {
+        min-width: 250px;
+        width: auto;
+    }
+}
+
+.required {
+    font-family: "Lato", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ff0d0d;
+    margin-bottom: 32px;
+}
+
+.login {
+    width: 180px;
+    height: 50px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4a4a4a;
+    padding: 0;
+    transition-duration: 0.5s;
+
+    &:hover {
+        background-color: #f16d7f;
+        cursor: pointer;
+    }
+}
+
+.shippingadressForget {
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #222222;
+    margin-left: 32px;
+    text-decoration: none;
+
+    @media(max-width: 991px) {
+        margin-left: 5px;
+    }
+    @media(max-width: 767px) {
+        display: flex;
+        margin-top: 15px;
+    }
+}

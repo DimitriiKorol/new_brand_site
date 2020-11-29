@@ -1,0 +1,417 @@
+.topBannerWrap{
+    height: 665px;
+    background-color: #e8e8e8;
+    opacity: 0;
+    animation: topBannerWrapAnimation 0.5s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+@keyframes topBannerWrapAnimation{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.topBannerContent{
+    background: url(../../img/TopHeaderBack.png) no-repeat 554px 0;
+    background-size: 550px;
+    display: flex;
+    align-items: center;
+    height: inherit;
+
+    @media(max-width: 1140px){
+        background: url(../../img/TopHeaderBack.png) no-repeat 400px 0;
+        width: inherit;
+    }
+
+    @media(max-width: 767px){
+        background: none;
+        width: inherit;
+    }
+}
+
+.topBannerSign{
+    height: 92px;
+    border-left: 12px solid #f16d7f;
+    padding-left: 12px;
+
+        @media(max-width: 364px){
+            height: 103px;
+        }
+
+    div{
+        &:first-child{
+            font-weight: 900;
+            font-size: 60px;
+            line-height: 41px;
+
+            @media(max-width: 364px){
+                line-height: 50px;
+            }
+        }
+
+        &:last-child {
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 32px;
+            margin-top: 19px;
+
+            @media(max-width: 364px){
+                line-height: 40px;
+            }
+        }
+    }
+}
+
+.offers{
+    margin-top: 100px !important;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 829px;
+    opacity: 0;
+    animation: offersAnimation 0.5s 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+
+    @media(max-width: 1124px){
+        height: inherit;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div{
+        position: relative;
+
+        @media(max-width: 1124px){
+            margin-bottom: 25px;
+        }
+
+        &:first-child{
+            margin-bottom: 20px;
+            margin-right: 20px;
+
+            @media(max-width: 1140px){
+                margin-bottom: 5px;
+                margin-right: 5px;
+            }
+
+            @media(max-width: 1124px){
+                margin-bottom: 25px;
+                margin-right: 0;
+            }
+        }
+
+        .label{
+            position: absolute;
+            top: 25px;
+            padding: 15px 20px;
+            background: white;
+            text-transform: uppercase;
+
+            .labelTop{
+                font-size: 18px;
+                color: #222222;
+                font-weight: 700;
+            }
+
+            .labelBottom{
+                font-size: 30px;
+                color: #f16d7f;
+                font-weight: 900;
+            }
+        }
+    }
+}
+
+@keyframes offersAnimation{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.featured{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 100px !important;
+}
+
+.featuredTitle{
+    font-family: "Lato", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: #222222;
+    text-align: center;
+    margin: 0;
+}
+
+.featuredDesc{
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #9f9f9f;
+    text-align: center;
+    display: block;
+    margin-top: 16px;
+}
+
+.featuredContent{
+    width: inherit;
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 28px;
+    grid-row-gap: 39px;
+
+    @media(max-width: 1140px){
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media(max-width: 850px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media(max-width: 767px){
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.featuredItemWrap{
+    width: 264px;
+    height: 370px;
+    transition-duration: 0.5s;
+
+    p{
+        font-family: "Lato", sans-serif;
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #222222;
+        margin: 19px 0 17px 21px;
+    }
+
+    i{
+        font-family: "Lato", sans-serif;
+        font-size: 16px;
+        line-height: 1.2;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #f16d7f;
+        margin-left: 21px;
+    }
+
+    &:hover{
+        box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+
+
+        .featuredCart{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.featuredImgWrap{
+    height: 280px;
+    position: relative;
+}
+
+.featuredCart{
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    position: absolute;
+    height: inherit;
+    width: 100%;
+    transition-duration: 0.5s;
+
+    button{
+        padding: 15px;
+        border: 1px solid #ffffff;
+        background: none;
+        color: white;
+        font-size: 13px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        outline: none;
+
+        img{
+            margin-right: 10px;
+        }
+    }
+}
+
+.featuredBrowse{
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    line-height: 48px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: #ffffff;
+    width: 212px;
+    height: 48px;
+    background-color: #f16d7f;
+    border: 0;
+    display: block;
+    margin: 60px auto 110px;
+    text-decoration: none;
+    text-align: center;
+    transition-duration: 0.5s;
+
+    &:hover{
+        background-color: #ed455c;
+        cursor: pointer;
+    }
+
+    b{
+        font-weight: 700;
+    }
+
+    i{
+        margin-left: 10px;
+    }
+}
+
+.offerForWomen{
+    display: flex;
+    height: 530px;
+    margin-bottom: 97px !important;
+
+    @media(max-width: 1140px){
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+    }
+}
+
+.offerForWomenBanner{
+    flex-shrink: 0;
+    height: inherit;
+    width: 767px;
+    background: url(../../img/rectangle_21_copy_1314.jpg) no-repeat;
+    background-size: cover;
+
+    @media(max-width: 1140px){
+        height: 529px;
+    }
+
+    @media(max-width: 767px){
+        width: 100%;
+        background: url(../../img/rectangle_21_copy_1314.jpg) no-repeat 500px cover;
+    }
+}
+
+.offerText{
+    margin-top: 146px;
+    margin-left: 39px;
+    color: #ffffff;
+
+    @media(max-width: 767px){
+        margin: 146px auto;
+        text-align: center;
+        width: 100%;
+    }
+
+}
+
+.percent{
+    font-size: 54px;
+    font-weight: 700;
+
+    span{
+        color: #f16d7f;
+        font-size: 54px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+
+.forWomen{
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.offerDetails{
+    display: flex;
+    flex-direction: column;
+    background-color: #222224;
+    color: #fbfbfb;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 373px;
+
+    @media(max-width: 1140px){
+        flex-direction: row;
+        width: 767px;
+    }
+
+    @media(max-width: 767px){
+        flex-direction: column;
+        width: inherit;
+    }
+}
+
+.offerUnit{
+    padding: 30px 30px 30px 110px;
+    flex-grow: 1;
+    background: url(../../img/forma_1_1340.png) no-repeat 36px 30px;
+    margin: 0;
+
+    @media(max-width: 1140px){
+        background: url(../../img/forma_1_1340.png) no-repeat center 36px;
+        padding: 110px 30px 30px 30px;
+        text-align: center;
+    }
+
+    &:first-child{
+        background: url(../../img/forma_1_1322.png) no-repeat 36px 30px;
+
+        @media(max-width: 1140px){
+            background: url(../../img/forma_1_1322.png) no-repeat center 36px;
+        }
+
+    }
+
+    &:last-child{
+        background: url(../../img/forma_1_1341.png) no-repeat 36px 30px;
+
+        @media(max-width: 1140px){
+            background: url(../../img/forma_1_1341.png) no-repeat center 36px;
+        }
+    }
+}
+
+.offerDetailsTitle{
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.offerDetailsText{
+    font-family: inherit;
+    line-height: 24px;
+    margin-top: 15px;
+    text-align: justify;
+    font-size: 14px;
+}
